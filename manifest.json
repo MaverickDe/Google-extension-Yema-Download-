@@ -1,0 +1,39 @@
+{
+    "name":"whatsapp bulk sender",
+    "version":"3.0",
+    "manifest_version":3,
+    "description":"sending bulk messages in whatsapp",
+    "permissions":["storage","tabs","scripting"],
+    "host_permissions":["https://*/*"],
+    "all_frames": true,
+    "background":{
+        "service_worker":"background.js"
+    },
+    "content_scripts":[
+        {
+            "matches":["https://*/*"],
+            "js":["content.js"]
+        }
+    ],
+   
+
+  "web_accessible_resources": [
+    {
+      "resources": [ "inject.js","blink.css"],
+      "matches": ["https://*/*" ]
+    }
+      
+  ],
+
+   
+    "action": {
+      "default_icon": {
+        "16":  "img/images(3).jpg",
+        "24":  "img/images(3).jpg",
+        "32":  "img/images(3).jpg"
+      },
+      "default_title": "My YT Bookmarks",
+      "default_popup": "index.html"
+    }
+    
+}

@@ -1,0 +1,19 @@
+@keyframes blink {
+
+    0%{
+        background-color: black;
+        transform: scale(1.1);
+        color: white;
+    }
+   100%{
+        background-color: white;
+        transform: scale(1);
+        color: black;
+    }
+}
+
+
+
+.animate{
+    animation: blink 2s 2s infinite ease-in-out
+}
